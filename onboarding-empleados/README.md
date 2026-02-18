@@ -1,10 +1,10 @@
-\# Onboarding Automático de Empleados
+# Onboarding Automático de Empleados
 
 
 
-\*\*Tipo:\*\* Cloud Flow | \*\*Estado:\*\* Producción  
+**Tipo:** Cloud Flow | **Estado:** Producción  
 
-\*\*Plataforma:\*\* Microsoft Power Automate | \*\*Licencia requerida:\*\* Free
+**Plataforma:** Microsoft Power Automate | **Licencia requerida:** Free
 
 
 
@@ -12,7 +12,7 @@
 
 
 
-\## Problema resuelto
+## Problema resuelto
 
 
 
@@ -20,19 +20,19 @@ Las PYMEs gestionan el onboarding de nuevos empleados de forma 100% manual:
 
 
 
-\- Crear carpetas en servidores locales uno por uno
+- Crear carpetas en servidores locales uno por uno
 
-\- Copiar documentos plantilla manualmente
+- Copiar documentos plantilla manualmente
 
-\- Enviar emails por separado a RRHH, supervisor e IT
+- Enviar emails por separado a RRHH, supervisor e IT
 
-\- Olvidar notificar áreas clave
+- Olvidar notificar áreas clave
 
-\- Sin trazabilidad del proceso
+- Sin trazabilidad del proceso
 
 
 
-\*\*Resultado:\*\* 2-3 horas invertidas por empleado nuevo, con alta tasa de errores y documentos perdidos.
+**Resultado:** 2-3 horas invertidas por empleado nuevo, con alta tasa de errores y documentos perdidos.
 
 
 
@@ -40,7 +40,7 @@ Las PYMEs gestionan el onboarding de nuevos empleados de forma 100% manual:
 
 
 
-\## Solución automatizada
+## Solución automatizada
 
 
 
@@ -48,23 +48,23 @@ Un formulario de Microsoft Forms dispara automáticamente el flujo completo:
 
 
 
-1\. Captura datos del nuevo empleado vía Forms
+1. Captura datos del nuevo empleado vía Forms
 
-2\. Crea carpeta personal estructurada en SharePoint
+2. Crea carpeta personal estructurada en SharePoint
 
-3\. Copia documentos plantilla (contrato, manual, checklist)
+3. Copia documentos plantilla (contrato, manual, checklist)
 
-4\. Registra al empleado en lista de seguimiento (SharePoint List)
+4. Registra al empleado en lista de seguimiento (SharePoint List)
 
-5\. Notifica automáticamente a RRHH, supervisor e IT
+5. Notifica automáticamente a RRHH, supervisor e IT
 
-6\. Envía email de bienvenida personalizado al nuevo empleado
+6. Envía email de bienvenida personalizado al nuevo empleado
 
-7\. Gestiona solicitudes de equipo de cómputo condicionalmente
+7. Gestiona solicitudes de equipo de cómputo condicionalmente
 
 
 
-\*\*Resultado:\*\* Proceso completo en menos de 2 minutos, cero errores manuales y casi nula intervención humana.
+**Resultado:** Proceso completo en menos de 2 minutos, cero errores manuales y casi nula intervención humana.
 
 
 
@@ -72,7 +72,7 @@ Un formulario de Microsoft Forms dispara automáticamente el flujo completo:
 
 
 
-\## Tecnologías utilizadas
+## Tecnologías utilizadas
 
 
 
@@ -92,7 +92,7 @@ Un formulario de Microsoft Forms dispara automáticamente el flujo completo:
 
 
 
-\## Arquitectura del flujo
+## Arquitectura del flujo
 
 
 
@@ -110,17 +110,17 @@ Inicializar variables (nombre, cargo, email, etc.)
 
 📦 Scope: Crear estructura de carpetas
 
-└── /Empleados/\[Nombre]/
+└── /Empleados/[Nombre]/
 
-├── 01\_Documentos\_Personales/
+├── 01_Documentos_Personales/
 
-├── 02\_Contrato\_y\_Legal/
+├── 02_Contrato_y_Legal/
 
-├── 03\_Onboarding/
+├── 03_Onboarding/
 
-├── 04\_Evaluaciones/
+├── 04_Evaluaciones/
 
-└── 05\_Otros/
+└── 05_Otros/
 
 ↓
 
@@ -158,7 +158,7 @@ Email de bienvenida al nuevo empleado
 
 
 
-\## Resultados
+## Resultados
 
 
 
@@ -178,25 +178,25 @@ Email de bienvenida al nuevo empleado
 
 
 
-\## Screenshots
+## Screenshots
 
 
 
-\### Vista general del flujo
+### Vista general del flujo
 
-!\[Flow overview](screenshots/diagram-workflow.png)
-
-
-
-\### Registro en lista de empleados
-
-!\[Lista empleados](screenshots/sharepoint\_processia.png)
+![Flow overview](screenshots/diagram-workflow.png)
 
 
 
-\### Email de aviso a supervisor 
+### Registro en lista de empleados
 
-!\[Email bienvenida](screenshots/email\_onboarding.png)
+![Lista empleados](screenshots/sharepoint_processia.png)
+
+
+
+### Email de aviso a supervisor 
+
+![Email bienvenida](screenshots/email_onboarding.png)
 
 
 
@@ -204,21 +204,21 @@ Email de bienvenida al nuevo empleado
 
 
 
-\## Instalación y configuración
+## Instalación y configuración
 
 
 
-\### Prerequisitos
+### Prerequisitos
 
-\- Microsoft 365 (Business Basic o superior)
+- Microsoft 365 (Business Basic o superior)
 
-\- SharePoint Online con permisos de edición
+- SharePoint Online con permisos de edición
 
-\- Power Automate (licencia Free es suficiente)
+- Power Automate (licencia Free es suficiente)
 
 
 
-\### Paso 1 — Configurar SharePoint
+### Paso 1 — Configurar SharePoint
 
 
 
@@ -226,7 +226,7 @@ Crea la siguiente estructura en tu sitio de SharePoint:
 
 
 
-\*\*Biblioteca de documentos:\*\*
+**Biblioteca de documentos:**
 
 
 
@@ -234,21 +234,21 @@ Documentos/
 
 └── Empleados/
 
-└── \_PLANTILLA\_NO\_BORRAR/
+└── _PLANTILLA_NO_BORRAR/
 
-├── 02\_Contrato\_y\_Legal/
+├── 02_Contrato_y_Legal/
 
-│ ├── PLANTILLA\_Contrato\_Trabajo.docx
+│ ├── PLANTILLA_Contrato_Trabajo.docx
 
-│ └── PLANTILLA\_Manual\_Empleado.docx
+│ └── PLANTILLA_Manual_Empleado.docx
 
-└── 03\_Onboarding/
+└── 03_Onboarding/
 
-└── PLANTILLA\_Checklist\_Onboarding.docx
+└── PLANTILLA_Checklist_Onboarding.docx
 
 
 
-\*\*Lista "Registro de Empleados"\*\* con las siguientes columnas:
+**Lista "Registro de Empleados"** con las siguientes columnas:
 
 
 
@@ -276,59 +276,59 @@ Documentos/
 
 
 
-\### Paso 2 — Crear el formulario
+### Paso 2 — Crear el formulario
 
 
 
 Crea un formulario en Microsoft Forms con estos campos:
 
-\- Nombre completo \*(requerido)\*
+- Nombre completo *(requerido)*
 
-\- Número de cédula/ID \*(requerido)\*
+- Número de cédula/ID *(requerido)*
 
-\- Email personal \*(requerido, validación email)\*
+- Email personal *(requerido, validación email)*
 
-\- Teléfono \*(requerido)\*
+- Teléfono *(requerido)*
 
-\- Cargo/Posición \*(requerido)\*
+- Cargo/Posición *(requerido)*
 
-\- Departamento \*(requerido, elección)\*
+- Departamento *(requerido, elección)*
 
-\- Supervisor directo \*(requerido)\*
+- Supervisor directo *(requerido)*
 
-\- Fecha de inicio \*(requerido, fecha)\*
+- Fecha de inicio *(requerido, fecha)*
 
-\- Tipo de contrato \*(requerido, elección)\*
+- Tipo de contrato *(requerido, elección)*
 
-\- Ubicación \*(requerido, elección)\*
+- Ubicación *(requerido, elección)*
 
-\- ¿Necesita equipo de cómputo? \*(requerido, elección)\*
+- ¿Necesita equipo de cómputo? *(requerido, elección)*
 
-\- Accesos a sistemas necesarios \*(opcional)\*
+- Accesos a sistemas necesarios *(opcional)*
 
-\- Notas adicionales \*(opcional)\*
-
-
-
-\### Paso 3 — Importar el flujo
+- Notas adicionales *(opcional)*
 
 
 
-1\. Descarga `flows/Onboarding-Empleados-v1.0.zip`
-
-2\. Ve a \[make.powerautomate.com](https://make.powerautomate.com)
-
-3\. Click en \*\*"Mis flujos"\*\* → \*\*"Importar"\*\* → \*\*"Importar paquete (.zip)"\*\*
-
-4\. Sube el archivo descargado
-
-5\. Configura las conexiones cuando se solicite (Forms, SharePoint, Outlook)
-
-6\. Click \*\*"Importar"\*\*
+### Paso 3 — Importar el flujo
 
 
 
-\### Paso 4 — Actualizar placeholders
+1. Descarga `flows/Onboarding-Empleados-v1.0.zip`
+
+2. Ve a [make.powerautomate.com](https://make.powerautomate.com)
+
+3. Click en **"Mis flujos"** → **"Importar"** → **"Importar paquete (.zip)"**
+
+4. Sube el archivo descargado
+
+5. Configura las conexiones cuando se solicite (Forms, SharePoint, Outlook)
+
+6. Click **"Importar"**
+
+
+
+### Paso 4 — Actualizar placeholders
 
 
 
@@ -338,7 +338,7 @@ Una vez importado, edita el flujo y reemplaza:
 
 | Placeholder | Descripción |
 
-| `YOUR\_TENANT.sharepoint.com/sites/YOUR\_SITE` | URL de tu sitio SharePoint |
+| `YOUR_TENANT.sharepoint.com/sites/YOUR_SITE` | URL de tu sitio SharePoint |
 
 | `rrhh@tuempresa.com` | Email del equipo de RRHH |
 
@@ -348,37 +348,17 @@ Una vez importado, edita el flujo y reemplaza:
 
 
 
-\### Paso 5 — Probar el flujo
+### Paso 5 — Probar el flujo
 
 
 
-1\. Llena el formulario con datos de prueba
+1. Llena el formulario con datos de prueba
 
-2\. Verifica en Power Automate → Historial de ejecución
+2. Verifica en Power Automate → Historial de ejecución
 
-3\. Confirma que se crearon carpetas en SharePoint
+3. Confirma que se crearon carpetas en SharePoint
 
-4\. Verifica que llegaron los emails correspondientes
-
-
-
----
-
-
-
-\## Mejoras futuras
-
-
-
-\- \[ ] Integración con Odoo para crear usuario automáticamente vía n8n
-
-\- \[ ] Recordatorios automáticos de checklist pendiente (día 3, 7, 30)
-
-\- \[ ] Dashboard en Power BI conectado a la lista de empleados
-
-\- \[ ] Aprobación previa de RRHH antes de iniciar el proceso
-
-\- \[ ] Directorio de supervisores en SharePoint para asignación dinámica de emails
+4. Verifica que llegaron los emails correspondientes
 
 
 
@@ -386,7 +366,27 @@ Una vez importado, edita el flujo y reemplaza:
 
 
 
-\## Autor
+## Mejoras futuras
+
+
+
+- [ ] Integración con Odoo para crear usuario automáticamente vía n8n
+
+- [ ] Recordatorios automáticos de checklist pendiente (día 3, 7, 30)
+
+- [ ] Dashboard en Power BI conectado a la lista de empleados
+
+- [ ] Aprobación previa de RRHH antes de iniciar el proceso
+
+- [ ] Directorio de supervisores en SharePoint para asignación dinámica de emails
+
+
+
+---
+
+
+
+## Autor
 
 
 
@@ -394,9 +394,9 @@ Mgs. Robinson Barrazueta - Ingeniería de Datos y Automatización
 
 
 
-\*\*Processia Ops\*\* - Automatización de procesos empresariales
+**Processia Ops** - Automatización de procesos empresariales
 
 
 
-Ecuador 🇪🇨 · \[processia.online](https://processia.online)
+Ecuador 🇪🇨 · [processia.online](https://processia.online)
 
