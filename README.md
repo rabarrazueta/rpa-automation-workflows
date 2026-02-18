@@ -56,7 +56,7 @@ Processia Ops es una consultora especializada en automatización y digitalizaci�
 
 |---|----------|-----------|-------------------|-------------|--------------|
 
-| [01](./01-onboarding-empleados/) | **Onboarding Automático de Empleados** | RRHH / Administrativo | Digitalización completa del proceso de incorporación de personal | Forms, SharePoint, Outlook | 98% reducción de tiempo |
+| [01](./onboarding-empleados/) | **Onboarding Automático de Empleados** | RRHH / Administrativo | Digitalización completa del proceso de incorporación de personal | Forms, SharePoint, Outlook | 98% reducción de tiempo |
 
 | 02 | *Procesador Inteligente de Facturas* | Contabilidad / Finanzas | OCR automático de facturas ecuatorianas con extracción de datos y aprobación | AI Builder, SharePoint, Outlook | 🚧 En desarrollo |
 
