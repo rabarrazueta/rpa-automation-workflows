@@ -1,0 +1,16 @@
+# Archivos temporales
+*.tmp
+*.log
+~$*
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos con datos reales (backups sin sanitizar)
+*_ORIGINAL.zip
+*_BACKUP.*
+*_real.*
+
+# Variables de entorno (por precaución)
+.env
